@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := http://jenkins.jx.afeib.cn
 DIR := "env"
 NAMESPACE := "jx-staging"
 OS := $(shell uname)

@@ -15,6 +15,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
+            sh 'helm init --client-only --stable-repo-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts'
             sh 'export $PROXY && export $NO_PROXY && jx step helm build'
           }
         }
@@ -27,6 +28,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
+            sh 'helm init --client-only --stable-repo-url=https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts'
             sh 'export $PROXY && export $NO_PROXY && jx step helm apply'
           }
         }

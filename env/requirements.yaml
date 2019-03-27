@@ -1,6 +1,6 @@
 dependencies:
 - name: business-process-1
-  repository: http://jenkins-x-chartmuseum:8080
+  repository: http://chartmuseum.jx.afeib.cn
   version: 0.0.37
 - alias: expose
   name: exposecontroller
